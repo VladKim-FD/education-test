@@ -1,0 +1,264 @@
+@import '../common/root';
+@import '../common/common';
+
+.red{
+    color: $red;
+    
+}
+
+.slider1-block{
+    padding-top: 75px;
+    position: relative;
+    @include media(992px){
+        padding-top: 40px
+    }
+}
+
+.slider1-content{
+    position: relative;
+}
+
+.slider1{
+    overflow: hidden;
+}
+
+.slider1-titles h4{
+    @include font(16px, 20px, $blue, 400)
+}
+.slider1-titles h3{
+    @include font(30px, 35px, $black, 700);
+    margin-bottom: 30px;
+}
+
+.slider1-track{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    // overflow: hidden;
+    transition: all ease .5s;
+    @include media(576px){
+        gap: 15px;
+    }
+}
+
+.slider1-item{
+    position: relative;
+}
+
+.slider1-item:hover .slide-like{
+    top: 20px;
+    transition: top .5s;
+    @include media(576px){
+        top: 10px;
+    }
+}
+
+.slide-like:not(:hover){
+    top: -60px;
+    transition: top .5s;
+}
+
+.slide-like{
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background: $white;
+    @include media(576px){
+        right: 10px;
+        padding: 10px;
+    }
+    @include media(480px){
+        padding: 5px;
+    }
+}
+
+.item-course-info{
+    display: flex;
+    flex-direction: column;
+    padding: 20px ;
+}
+
+.slide-like .icon-like{
+    color: $blue;
+    @include media(576px){
+        font-size: 25px;
+    }
+    @include media(480px){
+        font-size: 20px;
+    }
+}
+
+.slide-like .icon-like::before{
+    left: 22%;
+    font-weight: 400;
+    
+}
+
+.item-course-info h3{
+    margin-bottom: 18px;
+    @include font(27px, 32px, $black, 700, 'tt norms');
+    @include media(1200px){
+        font-size: 23px;
+        line-height: 28px;
+    }
+    @include media(992px){
+        font-size: 21px;
+    }
+    @include media(480px){
+        font-size: 18px;
+    }
+}
+
+.course-rating{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.level,
+.people,
+.rating,
+.teacher{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-level-wrapper,
+.people-icon-wrapper,
+.rating-icon-wrapper{
+    padding: 12px;
+    border-radius: 50%;
+   border: 1px solid $gray;
+}
+
+.icon-level{
+    font-size: 16px;
+}
+
+.icon-level,
+.icon-people, .icon-rating{
+    color: $black !important;
+}
+
+.level p,
+.people p,
+.rating p,
+.job{
+    @include font(15px, 18px, $option, 500, 'tt norms')
+}
+
+.course-extraInfo{
+    border-top: 2px solid $gray;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media(992px){
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.name{
+    @include font(16px, 20px, $black, 500, 'tt norms')
+}
+
+.price{
+    @include font(27px, 32px, $blue, 700, 'tt norms');
+    @include media(768px){
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+
+.slider1{
+    position: relative;
+    overflow: hidden;
+}
+
+.slider1-track{
+    width: 100%;
+    @include media(1200px){
+        // flex-wrap: wrap;
+    }
+}
+
+.slider1-item{
+    max-width: 460px;
+    width: 100%;
+    @include media(1200px){
+        // max-width: 320px;
+        // width: 100%;
+        // width: 50%;
+        // width: inherit;
+        min-width: 460px;
+    }
+    @include media(992px){
+        min-width: 48%;
+    }
+
+}
+
+.slider1-item img{
+    width: unset;
+    @include media(1200px){
+        width: 100%;
+    // height: auto;
+    object-fit: contain;
+    }
+   @include media(992px){
+     width: 100%;
+   }
+}
+
+.slider1-controls{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    display: flex;
+    gap: 6px;
+    @include media(768px){
+        right: 10px;
+        top: -10px;
+    }
+    @include media(576px){
+        top: 0;
+    }
+}
+
+.alisher .job{
+    @include media(1200px){
+        width: 110px;
+    }
+}
+
+.people{
+    @include media(992px){
+        display: none;
+    }
+}
+
+.level{
+    @include media(768px){
+        display: none;
+    }
+}
+
+.icon-prev,
+.icon-next{
+    font-size: 15px;
+    @include media(992px){
+        font-size: 20px;
+    }
+}
+
+.teacher{
+    @include media(625px){
+        display: none;
+    }
+}

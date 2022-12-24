@@ -1,0 +1,87 @@
+@import './common';
+
+@mixin font($fz: null, $lh: null, $c: null, $fw: null, $ff: null) {
+    font-size: $fz;
+    line-height: $lh;
+    color: $c;
+    font-weight: $fw;
+    font-family: $ff;
+}
+
+@mixin media($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include media(1400px){max-width: 1140px;}
+    @include media(1200px){max-width: 960px;}
+    @include media(992px){max-width: 720px;}
+    @include media(768){max-width: 540px;}
+    @include media(576px){max-width: 100%;}
+}
+
+.container{
+    @include container();
+}
+
+.red{
+    color: $red;
+}
+.yellow{
+    color: $yellow;
+}
+
+.block{
+    border-radius: 10px;
+    border: 2px solid $selectBg;
+    margin-top: 30px;
+    width: 66%;
+    @include media(992px){
+        width: 100%;
+    }
+}
+
+$tt-norms : ('Thin', 100), ('ExtraLight', 200), ('Light', 300), 
+('Regular', 400), ('Medium', 500), 
+('Bold',700), ('ExtraBold', 800), ('Black', 900);
+
+@each $name, $weight in $tt-norms {
+    @font-face {
+        font-family: 'tt norms';
+        src: url('../assets/fonts/font/TTNormsPro-#{$name}.ttf') format('truetype');
+        font-weight: $weight;
+    }
+}
+
+$icons: ('solid-900', 900), ('regular-400', 400), ('light-300', 300), ('brands-400', 450);
+
+@each $name, $weight in $icons {
+    @font-face {
+        font-family: 'icons';
+        src: url('../assets/images/icons/fotsawesome/fotsawesome/webfonts/fa-#{$name}.ttf') format('truetype');
+        font-weight: $weight;
+    }
+}
+
+.slider-control{
+    border: none;
+    outline: none;
+    padding: 28px;
+    background: $controlBg;
+    border-radius: 7px;
+    @include media(992px){
+        padding: 25px;
+    }
+    @include media(768px){
+        padding: 20px
+    }
+    @include media(576px){
+        padding: 15px
+    }
+}

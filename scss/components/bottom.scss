@@ -1,0 +1,62 @@
+@import '../common/root';
+@import '../common/common';
+
+.bottom-icons{
+    border-top: 2px solid $itemBg;
+    display: none;
+    padding: 20px 0;
+    justify-content: space-evenly;
+    @include media(768px){
+        display: flex;
+    }
+}
+
+.bottom-icon{
+  border-radius: 50%;
+  padding: 15px;
+  background: transparent;
+}
+
+.bottom-icon:hover{
+    background: $blue;
+    color: $white !important;
+}
+.bottom-icon:hover::before{
+    color: $white !important;
+}
+
+.icon-main,
+.icon-catalog{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.bottom-icon .icon-notification{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.bottom-icon .icon-like{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.bottom-icon .icon-notification::before{
+    // color: #1A2134;
+    top: unset;
+    left: unset;
+    position: relative;
+    font-weight: 400;
+}
+.bottom-icon .icon-like::before{
+    // color: #1A2134;
+    top: unset;
+    left: unset;
+    position: relative;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+}

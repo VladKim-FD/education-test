@@ -1,0 +1,121 @@
+@import '../common/root';
+@import '../common/common';
+
+.categories-block{
+    margin: 80px 0;
+    @include media(1200px){
+        margin: 50px 0;
+        @include media(992px){
+            margin: 30px 0;
+        }
+    }
+}
+
+.categories-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.text-left p{
+    margin-bottom: 5px;
+    @include font(16px, 20px, $blue, 400)
+}
+
+.text-left h4{
+    @include font(30px, 36px, $black, 700);
+    @include media(768px){
+        font-size: 25px;
+        line-height: 30px;
+    }
+    @include media(480px){
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+.text-left a{
+    @include font(25px, 30px, $blue, 500)
+}
+
+.popular-categories{
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    @include media(992px){
+        justify-content: center;
+    }
+    @include media(480px){
+        display: none;
+    }
+}
+
+.popular-categoria{
+    width: 31%;
+    padding: 55px 40px;
+    border-radius: 10px;
+    background: $grayText;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $itemBg;
+    @include media(992px){
+        width: 46%;
+        padding: 35px 20px;
+    }
+    
+}
+
+.popular-categoria p{
+    margin-top: 50px;
+    @include font(27px, 32px, $black, 500);
+    @include media(768px){
+        margin-top: 30px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+}
+
+.popular-categories-phone{
+    display: none;
+    @include media(480px){
+        margin-top: 30px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        flex-wrap: wrap;
+    }
+}
+
+.categoria-first{
+    grid-column: span 2;
+    grid-row: span 1;
+    @include media(390px){
+        grid-column: span 3;
+    }
+}
+
+.categoria-small{
+    @include media(390px){
+        grid-column: span 3;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.categoria-small{
+    padding: 10px;
+    background: $selectBg;
+    border-radius: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.categoria-small p{
+    @include font(16px, 20px, $black, 400)
+}

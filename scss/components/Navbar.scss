@@ -1,0 +1,261 @@
+@import '../common/root';
+@import '../common/common';
+@import '../components/btn.scss';
+
+
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px !important;
+    @include media(1200px){
+        justify-content: unset;
+        gap: 30px;
+    }
+    @include media(768px){
+        padding:  20px;
+        align-items: center;
+    }
+    @include media(576px){
+        gap: 15px;
+    }
+}
+
+.burger-menu{
+    height: max-content;
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    display: none;
+    @include media(576px){
+        display: flex;
+    }
+}
+
+.nav-left{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @include media(1200px){
+        flex-direction: column;
+        gap: 0;
+        justify-content: space-around;
+        width: 20%;
+    }
+    @include media(768px){
+        gap: 20px;
+    }
+    @include media(576px){
+        gap: 15px;
+        display: none;
+    }
+}
+
+.nav-logo{
+    display: flex;
+    gap: 8px;
+    
+}
+
+.circle{
+    background: $circleBg;
+    padding: 12px 8px;
+    border-radius: 50%;
+}
+
+.circle img{
+    display: block;
+}
+
+.categories{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.categories p{
+    // text-transform: uppercase;
+    @include font(18px, 22px, $black, 500, 'tt norms')
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include media(1200px){
+        flex-direction: column;
+        width: 80%;
+    }
+    @include media(576px){
+        height: 100%;
+    }
+}
+
+
+form{
+    position: relative;
+    @include media(1200px){
+        width: 100%;
+    }
+}
+
+form input{
+  border-radius: 60px;
+  border: 2px solid $gray;
+  height: 100%;
+  padding: 20px 0 20px 73px;
+  width: 350px;
+  @include media(1200px){
+    width: 100%;
+  }
+  @include media(576px){
+     padding-left: 22px;
+  }
+  @include media(480px){
+    padding-left: 12px;
+  }
+}
+
+form input::placeholder{
+    @include font(18px, 22px, $grayText, 500, 'tt norms');
+    @include media(576px){
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.search{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    @include media(576px){
+        right: 40px;
+        left: unset;
+        top: 18px;
+    }
+    @include media(480px){
+        right: 30px;
+    }
+} 
+
+.icon-search::before{
+    @include media(576px){
+        color: $grayText;
+    }
+}
+
+.line{
+    margin: 0 17px 0 34px;
+    height: 36px;
+    width: 1px;
+    background: $gray;
+    @include media(576px){
+        display: none;
+    }
+}
+
+.right-content{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include media(1200px){
+        gap: unset;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    @include media(768px){
+        gap: 15px;
+        justify-content: unset;
+    }
+    @include media(576px){
+        position: fixed;
+        top: 0;
+        right: -300px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(237, 227, 227);
+        z-index: 3;
+        width: 280px !important;
+        height: 100vh;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+}
+
+.nav-right p{
+    @include font(18px, 22px, $black, 500, 'tt norms')
+}
+
+.nav-btns{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include media(576px){
+        flex-direction: column;
+    }
+}
+
+.icons{
+    display: flex;
+    gap: 15px;
+}
+
+.icon{
+    padding: 22px;
+    border-radius: 50%;
+    border: 1px solid $black;
+}
+
+.icon-notification,
+.icon-like{
+    font-size: 30px;
+    width: 25px;
+    height: 25px;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.btns a{
+    padding: 16px 28px;
+    background: $btnBg;
+    @include font(22px, 26px, $white, 500, 'tt norms');
+    @include media(576px){
+        // display: none;
+        margin-top: 10px;
+    }
+}
+
+select {
+    padding: 16px 13px 16px 13px;
+    background: selectBg;
+    border-radius: 9px;
+    height: 100%;
+    @include font(22px, 26px, $option, 500, 'tt norms')
+}
+
+select option{
+    @include font(22px, 26px, $option, 500, 'tt norms')
+}
+
+.user{
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    background: $selectBg;
+    display: none;
+    @include media(576px){
+        display: flex;
+}
+}
+
+.icon-user{
+    font-size: 25px;
+    color: $gray;
+}
+

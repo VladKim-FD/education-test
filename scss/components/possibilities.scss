@@ -1,0 +1,46 @@
+@import '../common/root';
+@import '../common/common';
+
+.possibilities-block{
+    padding-bottom: 50px;
+    @include media(992px){
+        padding-bottom: 30px;
+    }
+}
+
+.possibilities-block h2 {
+  margin-bottom: 30px;
+}
+
+.possibilities{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include media(992px){
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+}
+
+.possibility{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: $selectBg;
+    padding: 25px 15px;
+    gap: 25px;
+    @include media(992px){
+        width: 48%;
+        gap: 20px;
+    }
+    @include media(576px){
+        width: 100%;
+    }
+}
+
+.possibility-img{
+  padding: 10px;
+  border-radius: 10px;
+  background: $white;
+}

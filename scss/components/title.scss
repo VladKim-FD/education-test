@@ -1,0 +1,11 @@
+@import '../common/root';
+@import '../common/common';
+
+h2{
+    @include font(30px, 36px, $black, 700);
+    @include media(576px){
+        font-size: 18px;
+        line-height: 22px;
+        color: $footerLink;
+    }
+}

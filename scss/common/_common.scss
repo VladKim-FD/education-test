@@ -1,0 +1,211 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'tt norms';
+}
+
+:root{
+    --circle-bg: #5060DB;
+    --black: #1A2134;
+    --gray: #E5E5E7;
+    --gray-text: #B2B3BB;
+    --white: #fff;
+    --btn-bg: #3347E6;
+    --select-bg: #F5F6FA;
+    --option-color: rgba(26, 33, 52, 0.7);
+    --red: red;
+    --yellow: yellow;
+    --blue: #3347E6;
+    --control-bg: #F7F7F7;
+    --footer-bg: #F5F6FA;
+    --footer-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    --footer-link: #47516C;
+    --line-color: #B2B3BB;
+    --header-bg: linear-gradient(94.9deg, #3347E6 0.35%, rgba(51, 71, 230, 0.77) 105.02%);
+    --item-bg: #F3F3F3;
+    --ad-bg: linear-gradient(274.21deg, rgba(223, 225, 245, 0.39) -8.08%, #FDFDFD 138.6%);
+    --btn-bg: #3347E6;
+    --blue-bg: linear-gradient(283.89deg, #5060DB 0%, rgba(80, 96, 219, 0.81) 100%);
+    --slide2-bg: linear-gradient(180deg, rgba(0, 0, 0, 0) 37.76%, rgba(0, 0, 0, 0.79) 100%);
+    --regbtn-bg: linear-gradient(90deg, #3347E6 0.23%, #AD33E6 28.42%, #3347E6 98.64%);
+    --boxshadow-header: 0px 4px 7px rgba(0, 0, 0, 0.03);
+    --green-bg: rgba(66, 193, 140, 0.3);
+    --green-text: #389D73;
+    --orange: #FEA405;
+    --title-gray: rgba(26, 33, 52, 0.6);
+    --comment-text: rgba(26, 33, 52, 0.7);
+    --date-color: #A8A8A8;
+    --bottom-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    --blue-btn: #5060DB;
+    --btn-shadow: 0px 13px 20px rgba(80, 96, 219, 0.3);
+}
+
+$btnShadow: var(--btn-shadow);
+$blueBtn: var(--blue-btn);
+$bottomShadow: var(--bottom-shadow);
+$dateColor: var(--date-color);
+$commentText: var(--comment-text);
+$titleGray: var(--title-gray);
+$orange: var(--orange);
+$greenText: var(--green-text);
+$greenBg: var(--green-bg);
+$bsHeader: var(--boxshadow-header);
+$regBtnBg: var(--regbtn-bg);
+$circleBg: var(--circle-bg);
+$black: var(--black);
+$gray: var(--gray);
+$grayText: var(--gray-text);
+$white: var(--white);
+$btnBg: var(--btn-bg);
+$selectBg: var(--select-bg);
+$option: var(--option-color);
+$red: var(--red);
+$yellow: var(--yellow);
+$blue: var(--blue);
+$controlBg: var(--control-bg);
+$footerBg: var(--footer-bg);
+$footerShadow: var(--footer-shadow);
+$footerLink: var(--footer-link);
+$lineColor: var(--line-color);
+$headerBg: var(--header-bg);
+$itemBg: var(--item-bg);
+$adBg: var(--ad-bg);
+$btnBg: var(--btn-bg);
+$blueBg: var(--blue-bg);
+$slide2Bg: var(--slide2-bg);
+
+.red{
+    color: $red !important;
+}
+
+.yellow{
+    color: $yellow !important;
+}
+
+
+
+.icon{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    &-search::before{
+        content: '\f002';
+        font-family: 'icons';
+        position: absolute;
+        color: $black;
+        top: 25%;
+        left: 0;
+        font-size: 20px;
+    }
+    &-notification::before{
+        content: '\f0f3';
+        font-family: 'icons';
+        position: absolute;
+        font-weight: 900;
+        top: 20%;
+        left: 20%;
+    }
+    &-like::before{
+        content: '\f004';
+        font-family: 'icons';
+        position: absolute;
+        font-weight: 900;
+        top: 20%;
+        left: 16%;
+    }
+    &-user::before{
+        content: '\f007';
+        font-family: 'icons';
+        font-weight: 900;
+    }
+    &-level::before{
+        content: '\f0b1';
+        font-family: 'icons';
+        font-weight: 400;
+    }
+    &-people::before{
+        content: '\f500';
+        font-family: 'icons';
+        font-weight: 300;
+    }
+    &-rating::before{
+        content: '\f005';
+        font-family: 'icons';
+        font-weight: 900;
+    }
+    &-prev::before{
+      content: '\f053';
+      font-family: 'icons';
+      font-weight: 900;
+    }
+    &-next::before{
+      content: '\f054';
+      font-family: 'icons';
+      font-weight: 900;
+    }
+    &-letter::before{
+      content: '\f0e0';
+      font-family: 'icons';
+      font-weight: 400;
+    }
+    &-phone::before{
+        content: '\f879';
+        font-family: 'icons';
+        font-weight: 400;
+    }
+    &-chat::before{
+        content: '\f1d8';
+        font-family: 'icons';
+        font-weight: 400;
+    }
+    &-instagram::before{
+        content: '\e055';
+        font-family: 'icons';
+        font-weight: 450;
+    }
+    &-twitter::before{
+        content: '\f081';
+        font-family: 'icons';
+        font-weight: 450;
+    }
+    &-facebook::before{
+        content: '\f09a';
+        font-family: 'icons';
+        font-weight: 450;
+    }
+    &-telegram::before{
+        content: '\f2c6';
+        font-family: 'icons';
+        font-weight: 450;
+    }
+    &-google-play::before{
+        content: '\f3ab';
+        font-family: 'icons';
+        font-weight: 450;
+    }
+    &-apple::before{
+        content: '\f179';
+        font-family: 'icons';
+        font-weight: 450;
+    }
+    &-main::before{
+        content: '\f015';
+        font-family: 'icons';
+        font-weight: 400;
+        width: 100%;
+        height: 100%;
+    }
+    &-catalog::before{
+        content: '\f0c9';
+        font-family: 'icons';
+        font-weight: 400;
+        width: 100%;
+        height: 100%;
+    }
+}
+

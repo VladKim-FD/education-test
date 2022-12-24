@@ -1,0 +1,26 @@
+@import '../common/root';
+@import '../common/common';
+
+.requirements{
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+}
+
+.requirements h3{
+    margin: 0;
+    @include font(30px, 36px, $black, 700);
+}
+
+.requirements ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.requirements li{
+    @include font(18px, 17px, $black, 400);
+    list-style: disc;
+}

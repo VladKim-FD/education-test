@@ -1,0 +1,93 @@
+@import '../common/root';
+@import '../common/common';
+
+header{
+    background: $headerBg;
+    position: relative;
+    padding: 95px 0;
+    @include media(1200px){
+        padding: 65px 0;
+    }
+    @include media(992px){
+        padding: 30px 0;
+    }
+}
+
+.header-content{
+    display: flex;
+    padding: 95px 0;
+}
+
+.header-text h1{
+    max-width: 780px;
+    width: 100%;
+    margin-bottom: 22px;
+    @include font(62px, 67px, $white, 800, );
+    @include media(1200px){
+        max-width: 600px;
+        line-height: 62px;
+        font-size: 55px;
+    }
+    @include media(992px){
+        line-height: 50px;
+        font-size: 50px;
+        max-width: 450px;
+    }
+    @include media(768px){
+        margin-bottom: 20px;
+        width: 90%;
+        max-width: unset;
+        font-size: 40px;
+        line-height: 45px;
+    }
+    @include media(480px){
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+.header-text h3{
+    max-width: 610px;
+    width: 100%;
+    margin-bottom: 50px;
+    @include font(27px, 32px, $white, 500);
+    @include media(1200px){
+        max-width: 475px;
+    }
+    @include media(768px){
+        
+        max-width: unset;
+        font-size: 22px;
+        line-height: 27px;
+    }
+    @include media(480px){
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+.header-text a{
+    padding: 20px 40px;
+    border-radius: 9px;
+    background: $white;
+    @include font(22px, 26px, $black, 500)
+}
+
+header img{
+    position: absolute;
+    top: 75px;
+    right: 45px;
+    max-width: 400px;
+    width: 100%;
+    // height: auto;
+    @include media(992px){
+        max-width: 300px;
+        right: 20px;
+    }
+    @include media(768px){
+        top: 135px;
+        display: none;
+    }
+}
+
+

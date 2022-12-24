@@ -1,0 +1,166 @@
+@import '../common/root';
+@import '../common/common';
+
+.top-text{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 35px;
+    margin-bottom: 55px;
+    @include media(992px){
+        margin-bottom: 35px;
+    }
+    @include media(768px){
+        gap: 10px;
+    }
+    @include media(576px){
+        display: none
+    }
+}
+
+.top-text p{
+    @include font(20px, 24px, $blue, 500)
+}
+
+.top-text span {
+    @include font(20px, 24px, $black, 500)
+}
+
+h1{
+    @include font(50px, 60px, $black, 700);
+    margin-bottom: 20px;
+    @include media(992px){
+        font-size: 40px;
+        line-height: 48px;
+    }
+    @include media(576px){
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+.course-short-description {
+    display: flex;
+    align-items: center;
+    @include media(576px){
+        flex-wrap: wrap;
+    }
+}
+
+.course-short-description p{
+    @include font(20px, 24px, $black, 500);
+    
+}
+
+.course-valuation{
+    display: flex;
+    @include media(576px){
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.course-categoria{
+  background: $greenBg;
+  border-radius: 5px;
+  padding: 15px;
+  margin-right: 30px;
+}
+
+.course-categoria p{
+    color: $greenText;
+}
+
+.icon-star{
+    font-size: 22px;
+}
+
+.icon-star::before{
+    content: '\f005';
+    font-weight: 900;
+    font-family: 'icons';
+    color: $orange;
+}
+
+.course-short-description ul{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 15px;
+}
+
+.course-details{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include media(992px){
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+}
+
+.details-text{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    @include media(576px){
+        display: none;
+    }
+}
+
+.details-text h5{
+    margin-bottom: 3px;
+    @include font(18px, 22px, $titleGray, 500)
+}
+
+.details-text p{
+    @include font(20px, 24px, $black, 500)
+}
+
+.details-btns{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include media(992px){
+        width: 100%;
+        margin-top: 35px;
+    }
+    @include media(576px){
+        margin-top: 20px;
+    }
+    @include media(480px){
+        flex-direction: column;
+    }
+}
+
+.detail-btn{
+    border-radius: 5px;
+    background: $selectBg;
+    padding: 15px;
+    gap: 12px;
+    display: flex;
+}
+
+.detail-btn p{
+    @include font(18px, 22px, $black, 400)
+}
+
+.icon-heart,
+.icon-share{
+    font-size: 22px;
+}
+
+.icon-heart::before{
+  content: '\f004';
+  font-weight: 900;
+  font-family: 'icons';
+}
+
+.icon-share::before{
+    content: '\f1e0';
+  font-weight: 400;
+  font-family: 'icons';
+}

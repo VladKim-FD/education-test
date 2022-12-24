@@ -1,0 +1,53 @@
+@import '../common/root';
+@import '../common/common';
+
+.ad-block{
+    padding: 30px 0;
+    @include media(768px){
+        margin: 0 20px;
+        // width: 100%;
+        display: flex;
+        
+    }
+}
+
+.registration-ad{
+    background: $selectBg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px !important;
+    text-align: center;
+    margin-bottom: 50px;
+    @include media(576px){
+        display: none;
+    }
+}
+
+.registration-ad p{
+    max-width: 690px;
+    margin: 25px 0 45px;
+    @include font(20px, 24px, $black, 400)
+}
+
+.registration-ad a{
+    background: $regBtnBg;
+    border-radius: 9px;
+    padding: 20px 55px;
+    @include font(22px, 26px, $white, 500)
+}
+
+.ad-btn{
+    width: 100%;
+    display: none;
+    // margin: 20px;
+    background: $blueBg;
+    padding: 25px 0;
+    text-align: center;
+    min-width: 94%;
+    @include font(18px, 22px, $white, 700);
+    @include media(576px){
+        display: flex;
+        justify-content: center;
+    }
+}

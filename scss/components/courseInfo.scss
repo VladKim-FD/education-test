@@ -1,0 +1,189 @@
+@import '../common/root';
+@import '../common/common';
+
+.course-ad{
+    position: relative;
+}
+
+.info-left{
+    width: 66%;
+    @include media(992px){
+        width: 100%;
+    }
+}
+
+.info-left video{
+    width: 100%;
+}
+
+.info-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33% !important;
+    margin-top: 0 !important;
+    @include media(992px){
+        width: 100% !important;
+        position: relative;
+        margin-top: 30px !important;
+    }
+}
+
+.info-right h2{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+    @include font(40px, 48px, $black, 500);
+    @include media(576px){
+        display: none;
+    }
+}
+
+.course-sell{
+    display: flex;
+    align-items: center;
+    border-radius: 9px;
+    background: $blue;
+    width: calc(100% - 2 * 30px);
+    margin: 0 30px 8px;
+    padding: 15px 30px;
+    gap: 50px;
+}
+
+.course-sell{
+   @include media(992px){
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+   }
+}
+
+.course-sell p{
+    @include font(22px, 26px, $white, 500)
+}
+
+.icon-trolley{
+    color: $white;
+}
+
+.icon-trolley::before{
+   content: '\f07a';
+   font-family: 'icons';
+   font-weight: 400;
+}
+
+.try-free{
+    display: flex;
+    width: calc(100% - 2 * 30px);
+    margin: 0 30px 8px;
+    padding: 15px 30px;
+    border: 1px solid $blue;
+    @include font(22px, 26px, $blue, 500);
+    @include media(992px){
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+.ad-btns{
+    padding-bottom: 20px;
+    border-bottom: 2px solid $selectBg;
+    @include media(576px){
+        display: none;
+    }
+}
+
+.course-ad h3{
+    margin: 30px 0 20px 30px;
+    @include font(23px, 28px, $black, 700)
+}
+
+.course-features{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-left: 30px;
+    margin-bottom: 45px;
+}
+
+.course-features li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.course-teacher{
+    padding: 30px;
+    border-top: 2px solid $selectBg;
+}
+
+.course-teacher h3{
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.teacher-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.teacher-info__top{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-text h5{
+    @include font(20px, 24px, $black, 500)
+}
+
+.info-text p{
+    @include font(20px, 24px, $titleGray, 500)
+}
+
+.info-bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media(480px){
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.teacher-rating{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.teacher-rating p{
+    @include font(20px, 24px, $black, 500)
+}
+
+.teacher-rating ul{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cources-count{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.icon-list::before{
+    content: '\f03a';
+    font-family: 'icons';
+    font-weight: 900;
+    color: $black;
+}
+
+.cources-count p{
+    @include font(20px, 24px, $black, 500)
+}

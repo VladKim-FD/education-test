@@ -1,0 +1,60 @@
+@import '../common/root';
+@import '../common/common';
+
+.payment-info {
+    display: flex;
+    padding: 50px 15px !important;
+    gap: 40px;
+    @include media(992px){
+        padding: 35px 20px !important;
+    }
+    @include media(768px){
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    @include media(576px){
+        padding: 45px 15px !important;
+    }
+}
+
+.coin-img{
+    min-width: 33%;
+    @include media(992px){
+        min-width: 47%;
+    }
+    @include media(768px){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.coin-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    @include media(768px){
+        width: 40%;
+        height: auto;
+    }
+}
+
+.payment-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    @include media(768px){
+        width: 100%;
+        text-align: center
+    }
+    
+}
+
+.payment-text p{
+    @include font(30px, 36px, $black, 400);
+    @include media(576px){
+        font-size: 16px;
+        line-height: 21px;
+    }
+}

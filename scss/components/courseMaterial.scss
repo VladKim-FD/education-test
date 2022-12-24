@@ -1,0 +1,96 @@
+@import '../common/root';
+@import '../common/common';
+
+.accordion-block{
+    padding: 30px;
+    @include media(576px){
+        display: none;
+    }
+}
+
+.accordion-block h3{
+    margin: 0;
+    margin-bottom: 20px;
+    @include font(30px, 36px, $black, 700);
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.acc-btn{
+    padding: 20px 25px;
+    background: $selectBg;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acc-btn p{
+    @include font(18px, 22px, $black, 400)
+}
+
+.btn-right p{
+    @include font(18px, 22px, $option, 400)
+}
+
+.btn-left{
+    display: flex;
+    align-items: center;
+}
+
+.btn-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-chevron-down::before{
+    content: '\f078';
+    font-family: 'icons';
+    font-weight: 900;
+}
+
+.acc-content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.acc-content li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-left{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-play::before{
+    content: '\f04b';
+    font-weight: 900;
+    font-family: 'icons';
+    color: $blue;
+}
+
+.acc-content{
+    // display: none;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    // visibility: hidden;
+    transition:   .5s;
+}
+
+.acc-content.active{
+    visibility: visible;
+    display: flex;
+    min-height: max-content;
+   
+    overflow: unset;
+}

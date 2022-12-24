@@ -1,0 +1,246 @@
+@import '../common/root';
+@import '../common/common';
+
+.slider2-block{
+    padding-top: 90px;
+   @include media(992px){
+    padding-top: 50px;
+   }
+   @include media(768px){
+    padding-top: 30px;
+   }
+}
+
+.slider2{
+    overflow: hidden
+}
+
+.slider2-titles h4{
+    @include font(16px, 20px, $blue, 400)
+}
+.slider2-titles h3{
+    @include font(30px, 35px, $black, 700);
+    margin-bottom: 30px;
+}
+
+.slider2-content{
+    position: relative;
+}
+.slider2-controls{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    display: flex;
+    gap: 6px;
+    @include media(992px){
+        right: 25px;
+    }
+    @include media(576px){
+        top: 30px;
+    }
+    @include media(480px){
+        top: 70px;
+    }
+}
+
+.slider2-track{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    transition: all ease .5s;
+    @include media(480px){
+        gap: 15px;
+    }
+}
+
+.slider2-item{
+    position: relative;
+    // background: $slide2Bg !important;
+    border-radius: 10px;
+    @include media(992px){
+        min-width: 47%;
+        // max-width: 430px !important;
+        // max-width: 48%;
+    }
+    @include media(576px){
+        border-radius: 10px;
+        min-height: 316px;
+    }
+    @include media(480px){
+      
+    }
+}
+
+.slider2-item:hover .slide-like{
+    top: 20px;
+    transition: top .5s;
+    @include media(576px){
+        top: 10px;
+    }
+}
+
+.slide-like:not(:hover){
+    top: -60px;
+    transition: top .5s;
+}
+
+.slide-like{
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background: $white;
+    @include media(576px){
+        right: 10px;
+        padding: 10px;
+    }
+    @include media(480px){
+        padding: 5px;
+    }
+}
+
+.slider2-item img{
+    object-fit: contain;
+    @include media(992px){
+        width: 100%;
+        height: auto;
+    }
+    @include media(576px){
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+.item-categoria{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    border-radius: 6px;
+    padding: 5px 7px;
+    @include media(768px){
+        left: 10px;
+        top: 10px;
+    }
+    @include media(600px){
+        display: none;
+    }
+}
+
+.item-categoria p{
+    @include font(18px, 22px, $white, 500);
+    
+}
+
+.course-info{
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    @include media(576px){
+        background: rgba(71, 81, 108, 0.5);
+        backdrop-filter: blur(23px);
+        border-radius: 15px;
+        margin-bottom: -10px;
+        padding: 7px;
+    }
+}
+
+.course-info h3{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    @include font(27px, 32px, $white, 700);
+    @include media(768px){
+        font-size: 22px;
+    }
+    @include media(576px){
+        margin-bottom: 10px;
+        line-height: 22px;
+        margin-left: 0;
+    }
+    @include media(480px){
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.course-rating2{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    @include media(600px){
+        margin-bottom: 50px;
+    }
+    @include media(576px){
+        margin-bottom: 0;
+    }
+}
+
+.course-rating2 p{
+    @include font(15px, 18px, $white, 500)
+}
+
+.course-rating2 .icon-level,
+.course-rating2 .icon-people, 
+.course-rating2 .icon-rating{
+    color: $white !important;
+}
+
+.course-extra-info{
+    // opacity: 0;
+    // display: none;
+    margin-bottom: -20%;
+    transition: all .5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: $white;
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include media(992px){
+        gap: 30px;
+        padding: 10px;
+        margin-bottom: -22%;
+    }
+    @include media(576px){
+        margin-bottom: 10px;
+        background: transparent;
+    }
+    @include media(480px){
+        padding: 0;
+        margin-top: 10px;
+    }
+}
+
+.slider2-item:hover .course-extra-info{
+    margin-bottom: 0;
+}
+
+.teacher-info{
+    gap: 0 !important;
+}
+
+.name,
+.job{
+    @include media(992px){
+        width: 140px;
+    }
+}
+
+.slider2 .price{
+    @include media(992px){
+        font-size: 23px;
+        line-height: 22px;
+    }
+    @include media(576px){
+        color: $white;
+    }
+    @include media(480px){
+        font-size: 20px;
+    line-height: 10px;
+    }
+}
+
+.slider2 .rating-icon-wrapper{
+    padding: 0;
+}

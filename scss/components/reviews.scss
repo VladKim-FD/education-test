@@ -1,0 +1,182 @@
+@import '../common/root';
+@import '../common/common';
+
+.reviews{
+    padding: 30px;
+    margin-bottom: 50px;
+    @include media(576px){
+        display: none;
+    }
+}
+
+.reviews h3{
+    @include font(30px, 36px, $black, 700);
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.reviews-rating{
+    margin: 0 30px;
+    display: flex;
+    gap: 10px;
+    @include media(768px){
+        flex-wrap: wrap;
+    }
+}
+
+.rating-left{
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $selectBg;
+    @include media(768px){
+        margin: 0 auto 10px;
+    }
+}
+
+.evaluation{
+    margin-bottom: 3px;
+    @include font(50px, 60px, $footerLink, 700 ) 
+}
+
+.reviews-count{
+    margin-top: 10px;
+    text-align: center;
+    @include font(14px, 17px, $footerLink, 400)
+}
+
+.rating-left ul{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-right{
+    width: 100%;
+    display: flex;
+    padding: 30px 45px;
+    border-radius: 10px;
+    background: $selectBg;
+    gap: 20px;
+    @include media(768px){
+        width: 100%;
+    }
+}
+
+.rating-right li{
+    @include font(14px, 17px, $black, 400 )
+}
+
+.rating-right ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-scales{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.scale{
+    height: 4px;
+    width: 100%;
+    background: $lineColor;
+    border-radius: 4px;
+}
+
+.line-index{
+    background: $blueBtn;
+    height: 100%;
+    width: 0;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 30px;
+    align-items: stretch;
+    gap: 30px;
+    @include media(768px){
+        margin-top: 30px;
+    }
+}
+
+.review-top{
+    display: flex;
+    gap: 15px;
+}
+
+.review-top .stars{
+    gap: 7px;
+}
+
+.review-top p{
+    @include font(16px, 21px, $dateColor, 500)
+}
+
+.review{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.review img{
+    height: max-content;
+}
+
+.feedback {
+    @include font(14px, 17px, $commentText, 400)
+}
+
+.stars{
+    display: flex;
+    gap: 15px;
+}
+
+.stars ul{
+    display: flex;
+}
+
+.stars p{
+    @include font(14px, 17px, $dateColor, 500)
+}
+
+.leave-review-btn{
+    margin: 30px auto 0;
+    display: block;
+    padding: 16px 28px;
+    background: var(--btn-bg);
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    color: var(--white);
+    font-weight: 500;
+    font-family: "tt norms";
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.leave-review-btn:hover{
+    cursor: pointer;
+}
+
+.review-btn{
+    padding: 5px 10px;
+    background: transparent;
+    border: 1.5px solid $btnBg;
+}
+
+.review-btn:hover{
+    cursor: pointer;
+}
+
+.review-btn span{
+@include font(22px, 26px, $btnBg, 500)
+}
